@@ -1,0 +1,2 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/mkatzmann/Documents/Development/hyperbolic/disputation/hmanim/documentation/source/media/videos/480p30/partial_movie_files/AnnularSectorStretchRadiiAndAngleInverseExample/1294469148_156673603_2690809957.mp4'

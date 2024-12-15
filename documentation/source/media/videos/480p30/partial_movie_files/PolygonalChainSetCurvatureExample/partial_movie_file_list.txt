@@ -1,0 +1,2 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/nsintegermax/Documents/Development/hyperbolic/disputation/hmanim/docs/source/media/videos/480p30/partial_movie_files/PolygonalChainSetCurvatureExample/1294469148_1929954625_2686691684.mp4'

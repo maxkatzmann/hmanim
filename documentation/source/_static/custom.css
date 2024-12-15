@@ -1,0 +1,5 @@
+/* Hide <pre> elements with 'data-manim-binder' attribute. Otherwise the code in
+the examples will be shown twice.*/
+pre[data-manim-binder] {
+    display: none;
+}
