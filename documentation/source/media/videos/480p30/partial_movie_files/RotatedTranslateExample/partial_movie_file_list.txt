@@ -1,2 +1,2 @@
 # This file is used internally by FFMPEG.
-file 'file:/Users/mkatzmann/Documents/Development/hyperbolic/disputation/hmanim/documentation/source/media/videos/480p30/partial_movie_files/RotatedTranslateExample/1294469148_3728325682_1115877872.mp4'
+file 'file:/Users/mkatzmann/Documents/Development/hyperbolic/hmanim/documentation/source/media/videos/480p30/partial_movie_files/RotatedTranslateExample/1294469148_3728325682_1115877872.mp4'
