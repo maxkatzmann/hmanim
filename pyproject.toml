@@ -1,0 +1,29 @@
+[build-system]
+requires      = ['setuptools>=61.0.0']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'hmanim'
+version = '0.1.0'
+description = 'The hyperbolic extension of manim!'
+readme = 'README.md'
+authors = [{ name = 'Maximilian Katzmann', email = 'max.katzmann@gmail.com' }]
+license = { file = 'LICENSE' }
+classifiers = [
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+]
+keywords = ['animation', 'visualization', 'hyperbolic', 'geometry', 'math']
+dependencies = [
+    'colour',
+    'manim',
+    'networkx',
+    'numpy',
+]
+requires-python = '>=3.12'
+
+[project.optional-dependencies]
+dev = []
+
+[project.urls]
+Homepage = 'https://github.com/maxkatzmann/hmanim'

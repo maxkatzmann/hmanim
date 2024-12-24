@@ -1,8 +1,3 @@
-.. HManim documentation master file, created by
-   sphinx-quickstart on Wed Nov 20 14:03:53 2024.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to HManim's documentation!
 ==================================
 
@@ -10,9 +5,13 @@ HManim is the hyperbolic extension of `Manim <https://www.manim.community/>`_.
 It provides functionality for drawing and animating objects in the `hyperbolic plane
 <https://en.wikipedia.org/wiki/Hyperbolic_geometry>`_.
 
-To this end, two modules are provided. The :doc:`native` allows for
-visualizations in the native representation of the hyperbolic plane. It is the
-more comprehensive of the two. In addition, the :doc:`poincare` allows for
+HManim is open-source, with the code being available on `GitHub
+<https://github.com/maxkatzmann/hmanim>`_.
+Contributions are welcome!
+
+The package provides two modules. The :doc:`native` allows for visualizations
+in the native representation of the hyperbolic plane. It is the more
+comprehensive of the two. In addition, the :doc:`poincare` allows for
 visualizations in the Poincaré disk model. We refer to the documentation of the
 individual models for further details.
 
@@ -137,6 +136,57 @@ Example
               )
             )
 
+Installation
+------------
+
+To install HManim, simply run
+
+.. code-block:: bash
+
+   pip install hmanim
+
+.. note::
+   We recommend installing HManim in a virtual environment.
+
+Usage
+-----
+
+Once installed, you can use HManim by creating a Python file (e.g.,
+``scene.py``), defining a class that derives from Manim's ``Scene``, and
+overriding its ``construct`` method.
+
+.. code-block:: python
+
+   from hmanim import native
+   from manim import Scene, PolarPlane
+
+   class ExampleScene(Scene):
+       def construct(self):
+           plane = PolarPlane(size=5)
+
+           circle = native.Circle(
+               center=native.Point(),
+               radius=5.0,
+               plane=plane,
+           )
+
+           self.add(circle)
+           self.play(native.Translate(circle, 3.0))
+
+
+Then you render the scene by running
+
+.. code-block:: bash
+
+   python -m manim -p scene.py ExampleScene
+
+.. note::
+   Here the flag `-p` is used to show a preview of the created video once it is
+   rendered.
+
+The resulting files can then be found in the created `media` directory.
+
+For more examples, we refer to the documentation of the individual modules.
 
 Modules
 -------

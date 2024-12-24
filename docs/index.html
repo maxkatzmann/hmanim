@@ -275,9 +275,11 @@
 <h1>Welcome to HManim’s documentation!<a class="headerlink" href="#welcome-to-hmanim-s-documentation" title="Link to this heading">¶</a></h1>
 <p>HManim is the hyperbolic extension of <a class="reference external" href="https://www.manim.community/">Manim</a>.
 It provides functionality for drawing and animating objects in the <a class="reference external" href="https://en.wikipedia.org/wiki/Hyperbolic_geometry">hyperbolic plane</a>.</p>
-<p>To this end, two modules are provided. The <a class="reference internal" href="native.html"><span class="doc">Native Module</span></a> allows for
-visualizations in the native representation of the hyperbolic plane. It is the
-more comprehensive of the two. In addition, the <a class="reference internal" href="poincare.html"><span class="doc">Poincaré Module</span></a> allows for
+<p>HManim is open-source, with the code being available on <a class="reference external" href="https://github.com/maxkatzmann/hmanim">GitHub</a>.
+Contributions are welcome!</p>
+<p>The package provides two modules. The <a class="reference internal" href="native.html"><span class="doc">Native Module</span></a> allows for visualizations
+in the native representation of the hyperbolic plane. It is the more
+comprehensive of the two. In addition, the <a class="reference internal" href="poincare.html"><span class="doc">Poincaré Module</span></a> allows for
 visualizations in the Poincaré disk model. We refer to the documentation of the
 individual models for further details.</p>
 <section id="example">
@@ -519,6 +521,51 @@ class OverviewExample(Scene):
         )
 
 </pre></div></section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>To install HManim, simply run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>hmanim
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We recommend installing HManim in a virtual environment.</p>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>Once installed, you can use HManim by creating a Python file (e.g.,
+<code class="docutils literal notranslate"><span class="pre">scene.py</span></code>), defining a class that derives from Manim’s <code class="docutils literal notranslate"><span class="pre">Scene</span></code>, and
+overriding its <code class="docutils literal notranslate"><span class="pre">construct</span></code> method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hmanim</span> <span class="kn">import</span> <span class="n">native</span>
+<span class="kn">from</span> <span class="nn">manim</span> <span class="kn">import</span> <span class="n">Scene</span><span class="p">,</span> <span class="n">PolarPlane</span>
+
+<span class="k">class</span> <span class="nc">ExampleScene</span><span class="p">(</span><span class="n">Scene</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">construct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">plane</span> <span class="o">=</span> <span class="n">PolarPlane</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+        <span class="n">circle</span> <span class="o">=</span> <span class="n">native</span><span class="o">.</span><span class="n">Circle</span><span class="p">(</span>
+            <span class="n">center</span><span class="o">=</span><span class="n">native</span><span class="o">.</span><span class="n">Point</span><span class="p">(),</span>
+            <span class="n">radius</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span>
+            <span class="n">plane</span><span class="o">=</span><span class="n">plane</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">circle</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">native</span><span class="o">.</span><span class="n">Translate</span><span class="p">(</span><span class="n">circle</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Then you render the scene by running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>manim<span class="w"> </span>-p<span class="w"> </span>scene.py<span class="w"> </span>ExampleScene
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here the flag <cite>-p</cite> is used to show a preview of the created video once it is
+rendered.</p>
+</div>
+<p>The resulting files can then be found in the created <cite>media</cite> directory.</p>
+<p>For more examples, we refer to the documentation of the individual modules.</p>
+</section>
 <section id="modules">
 <h2>Modules<a class="headerlink" href="#modules" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -595,6 +642,8 @@ class OverviewExample(Scene):
             <ul>
 <li><a class="reference internal" href="#">Welcome to HManim’s documentation!</a><ul>
 <li><a class="reference internal" href="#example">Example</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
 <li><a class="reference internal" href="#modules">Modules</a></li>
 </ul>
 </li>
