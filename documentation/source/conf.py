@@ -13,7 +13,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../../hmanim/src/"))
 
 project = "HManim"
-copyright = "2024, Maximilian Katzmann"
+copyright = "2025, Maximilian Katzmann"
 author = "Maximilian Katzmann"
 
 # -- General configuration ---------------------------------------------------
