@@ -15,6 +15,18 @@ comprehensive of the two. In addition, the :doc:`poincare` allows for
 visualizations in the Poincaré disk model. We refer to the documentation of the
 individual models for further details.
 
+Showcase
+--------
+
+The framework has been used to render the slides in the
+following video:
+
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/OuHBBrLgHII" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The corresponding code can be found on `GitHub <https://github.com/maxkatzmann/disputation>`_.
+
 Example
 -------
 
